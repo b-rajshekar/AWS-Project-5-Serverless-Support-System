@@ -17,12 +17,11 @@ Users can submit a support request through a web form, and the data is processed
 
 ## 🧱 Architecture
 
-User  
-→ CloudFront  
-→ S3 (Static Website)  
-→ API Gateway  
-→ Lambda (Node.js)  
-→ DynamoDB  
+User submits a support ticket via a static website hosted on Amazon S3 and served through CloudFront.  
+The request flows through API Gateway to a Lambda function, which validates and stores the ticket in DynamoDB.
+
+<img width="939" height="582" alt="image" src="https://github.com/user-attachments/assets/5270bc68-f182-4884-afb6-3d1404f38328" />
+
 
 ---
 
